@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:uispeed_grocery_shop/model/food.dart';
 import 'package:uispeed_grocery_shop/page/detail_page.dart';
+import 'package:uispeed_grocery_shop/screens/login_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -60,13 +61,15 @@ class _HomePageState extends State<HomePage> {
             color: Colors.grey[300],
             borderRadius: BorderRadius.circular(8),
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,MaterialPageRoute(builder: (context)=> const LoginPage()));
+              },
               borderRadius: BorderRadius.circular(8),
               child: Container(
                 height: 40,
                 width: 40,
                 alignment: Alignment.center,
-                child: const Icon(Icons.menu, color: Colors.black),
+                child: const Icon(Icons.login_outlined, color: Colors.black),
               ),
             ),
           ),
